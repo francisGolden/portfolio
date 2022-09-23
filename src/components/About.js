@@ -15,7 +15,7 @@ function About() {
         }}
         id="about"
         className="flex justify-between items-center h-screen flex-col w-screen
-        text-slate-50 text-6xl p-12 text-center"
+        text-slate-50 bg-slate-500 text-6xl p-12 text-center"
       >
         <div className="flex flex-col text-3xl justify-center h-[80%]">
           <span className="font-bold text-4xl">Who's this guy?</span>

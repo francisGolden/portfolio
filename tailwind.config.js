@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "historja": "url('img/historjascreen.png')",
+        "waldo": "url('img/waldoscreen.png')",
+        "mario": "url('img/marioscreen.png')"
+      }
+    },
   },
   plugins: [],
 }
