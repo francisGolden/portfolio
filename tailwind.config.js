@@ -9,7 +9,7 @@ module.exports = {
         "historja": "url('img/historjascreen.png')",
         "waldo": "url('img/waldoscreen.png')",
         "mario": "url('img/marioscreen.png')",
-        "trafalgar": "url('img/trafalgar.jpg')"
+        "2": "url('img/2.webp')"
         
       }
     },

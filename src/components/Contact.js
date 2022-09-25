@@ -6,7 +6,7 @@ function Contact() {
       id="contact"
       className="flex justify-between items-center 
   h-screen/2 flex-col w-screen gap-4
-text-slate-50 text-2xl p-12 text-center bg-cyan-700"
+text-slate-50 text-2xl p-12 text-center bg-cyan-700/90"
     >
       Let's connect!
       <div className="flex gap-4">
