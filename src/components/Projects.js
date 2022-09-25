@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { AiOutlineDown } from "react-icons/ai";
 
 function Projects() {
   const Box = ({ children, background }) => {
@@ -17,48 +18,60 @@ function Projects() {
   };
 
   return (
-    <div
-      id="projects"
-      className="flex justify-between items-center 
-      h-screen flex-col w-screen bg-slate-600
+    <AnimatePresence>
+      <motion.div
+        id="projects"
+        className="flex justify-between items-center 
+      h-screen flex-col w-screen 
   text-slate-50 text-6xl p-12 text-center"
-    >
-      <ul
-        className="grid grid-cols-2 grid-rows-2 items-center 
-      justify-center h-[90%] gap-4"
       >
-        <Box background="bg-historja">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/francisGolden/historja#readme"
-          >
-            Historja
-          </a>
-        </Box>
-        <Box background="bg-waldo">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/francisGolden/Where-s-Waldo#readme"
-          >
-            Where's Waldo
-          </a>
-        </Box>
-        <Box background="bg-mario">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/francisGolden/Super-Mario-Memory-Card-Game#readme"
-          >
-            Mario
-          </a>
-        </Box>
-        <Box>Coming soon...</Box>
-      </ul>
-
-      <a href="#contact">Contact</a>
-    </div>
+        <h2 className="mb-5">Projects</h2>
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-2 grid-rows-4 items-center 
+      justify-center h-[90%] gap-4"
+        >
+          <Box background="bg-historja">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/francisGolden/historja#readme"
+            >
+              Historja
+            </a>
+          </Box>
+          <Box background="bg-waldo">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/francisGolden/Where-s-Waldo#readme"
+            >
+              Where's Waldo
+            </a>
+          </Box>
+          <Box background="bg-mario">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/francisGolden/Super-Mario-Memory-Card-Game#readme"
+            >
+              Mario
+            </a>
+          </Box>
+          <Box>Coming soon...</Box>
+        </motion.ul>
+        <a href="#contact">
+          <AiOutlineDown />
+        </a>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

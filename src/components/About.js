@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import {AiOutlineDown} from "react-icons/ai"
 
 function About() {
   return (
@@ -15,18 +16,19 @@ function About() {
         }}
         id="about"
         className="flex justify-between items-center h-screen flex-col w-screen
-        text-slate-50 bg-slate-500 text-6xl p-12 text-center"
+        text-slate-50 text-6xl p-12 bg-1 bg-blend-hard-light 
+        text-center"
       >
         <div className="flex flex-col text-3xl justify-center h-[80%]">
           <span className="font-bold text-4xl">Who's this guy?</span>
           <span>I'm a person from Italy.</span>
           <span>
             I like taking long walks surrounded by the nature, <br></br>
-            taking care of my cat and developing apps/webpages.
+            taking care of my cat, reading history books and <br></br> developing apps/webpages.
           </span>
         </div>
 
-        <a href="#projects">Projects</a>
+        <a href="#projects"><AiOutlineDown /></a>
       </motion.div>
     </AnimatePresence>
   );

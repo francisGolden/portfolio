@@ -1,19 +1,20 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import {AiOutlineDown} from "react-icons/ai"
 
 function Header() {
   return (
     <AnimatePresence>
-      <motion.div
+      <motion.div id="header"
         className="flex justify-between items-center h-screen flex-col w-screen
-     text-slate-50 bg-slate-400 text-6xl p-12 text-center"
+     text-slate-50 text-6xl p-6 text-center"
       >
         <AnimatePresence>
           <motion.div
             initial={{ opacity: 0, scale: 2 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", bounce: 0, transition: 0.4 }}
-            className="flex flex-col justify-center h-[90%]"
+            className="flex flex-col justify-center h-screen"
           >
             <h1>
               Hi, I'm <b>Francesco.</b>
@@ -30,9 +31,9 @@ function Header() {
           animate={{ y: 0 }}
           transition={{ type: "spring", bounce: 0, transition: 0.4 }}
           href="#about"
-          className="p-4"
+          className="p-12"
         >
-          <p>About</p>
+          <AiOutlineDown />
         </motion.a>
       </motion.div>
     </AnimatePresence>

@@ -7,7 +7,9 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="main-container">
+    <div className="flex flex-col items-center 
+     bg-trafalgar
+    justify-start flex-1 overflow-y-hidden overflow-x-hidden box-border">
       <Navbar />
       <Header />
       <About />
