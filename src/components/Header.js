@@ -13,7 +13,7 @@ function Header() {
           <motion.div
             initial={{ opacity: 0, scale: 2 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", bounce: 0, transition: 0.4 }}
+            transition={{ type: "spring", bounce: 0, delay: 0.5, duration: 1.3 }}
             className="flex flex-col justify-center h-screen"
           >
             <h1>
@@ -29,7 +29,7 @@ function Header() {
         <motion.a
           initial={{ y: "100vh" }}
           animate={{ y: 0 }}
-          transition={{ type: "spring", bounce: 0, transition: 0.4 }}
+          transition={{ type: "spring", bounce: 0, delay: 0.5, duration: 1.3 }}
           href="#about"
           className="p-12"
         >
