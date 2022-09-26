@@ -14,18 +14,14 @@ function About() {
           visible: { opacity: 1 },
           hidden: { opacity: 0 },
         }}
+        
         id="about"
         className="flex justify-between items-center h-screen flex-col w-screen
-        text-slate-50 text-6xl p-12 bg-1 bg-blend-hard-light 
+        text-slate-50 text-6xl p-6
         text-center"
       >
-        <div className="flex flex-col text-3xl justify-center h-[80%]">
-          <span className="font-bold text-4xl">Who's this guy?</span>
-          <span>I'm a person from Italy.</span>
-          <span>
-            I like taking long walks surrounded by the nature, <br></br>
-            taking care of my cat, reading history books and <br></br> developing apps/webpages.
-          </span>
+        <div className="flex flex-col text-4xl justify-around h-[80%]">
+
         </div>
 
         <a href="#projects"><AiOutlineDown /></a>
