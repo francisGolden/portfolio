@@ -7,10 +7,17 @@ function Projects() {
     return (
       <motion.li
         whileHover={{ scale: 1.2, y: 0, zIndex: 1 }}
-        transition={{ type: "spring", bounce: 0, zIndex: 100, duration: 0.4 }}
-        className={`flex text-slate-800 justify-center font-bold
-    items-center border-solid ${background} bg-slate-300 
-    bg-cover bg-blend-soft-light shadow-lg p-4 h-[100%]`}
+        transition={{
+          type: "spring",
+          zIndex: 100,
+          duration: 0.4,
+        }}
+        className={`flex md:hover:text-slate-800 justify-center font-bold
+    items-center border-solid ${background} md:text-transparent 
+    text-slate-800
+    bg-slate-300 md:bg-blend-normal bg-blend-soft-light 
+    transition-colors ease-in-out
+    bg-cover md:hover:bg-blend-soft-light shadow-lg p-4 h-[100%]`}
       >
         {children}
       </motion.li>
@@ -46,7 +53,12 @@ function Projects() {
               href="https://github.com/francisGolden/historja#readme"
               className=""
             >
-              Historja
+              <h1>Historja</h1>
+              <p className="text-2xl font-thin">
+                Historical knowledge manager. <br></br>
+                Stack: React, Firebase, Tailwind <br></br>APIs used: Maps
+                Javascript API, Geocoding API, Places API
+              </p>
             </a>
           </Box>
           <Box background="bg-waldo">
@@ -55,7 +67,11 @@ function Projects() {
               rel="noopener noreferrer"
               href="https://github.com/francisGolden/Where-s-Waldo#readme"
             >
-              Where's Waldo
+              <h1>Where's Waldo</h1>
+              <p className="text-2xl font-thin">
+                Find Waldo type game. <br></br>
+                Stack: React, Firebase, Tailwind
+              </p>
             </a>
           </Box>
           <Box background="bg-mario">
@@ -64,14 +80,31 @@ function Projects() {
               rel="noopener noreferrer"
               href="https://github.com/francisGolden/Super-Mario-Memory-Card-Game#readme"
             >
-              Mario
+              <h1>Mario</h1>
+              <p className="text-2xl font-thin">
+                Super Mario themed memory game. <br></br>
+                Stack: React
+              </p>
             </a>
           </Box>
-          <Box>Coming soon...</Box>
+          <Box>
+            <p className="text-slate-800">Coming soon...</p>
+          </Box>
         </motion.ul>
-        <a href="#contact" className="p-6">
+        <motion.a
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          href="#contact"
+          className="p-6"
+        >
           <AiOutlineDown />
-        </a>
+        </motion.a>
       </motion.div>
     </AnimatePresence>
   );

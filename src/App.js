@@ -6,9 +6,11 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="flex flex-col items-center 
+    <div
+      className="flex flex-col items-center 
      bg-2 bg-no-repeat bg-cover bg-transparent
-    justify-start flex-1 overflow-y-hidden overflow-x-hidden box-border">
+    justify-start flex-1 overflow-y-hidden overflow-x-hidden box-border"
+    >
       <Navbar />
       <Header />
       <Projects />
